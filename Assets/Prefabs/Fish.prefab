@@ -150,3 +150,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSpeed: -4.58
   rb: {fileID: 0}
+  Fish: {fileID: 0}

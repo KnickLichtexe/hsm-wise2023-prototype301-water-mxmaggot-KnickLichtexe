@@ -8,13 +8,10 @@ public class FishMove : MonoBehaviour
     private int Score;
     public Rigidbody rb;
     public GameObject Fish;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         rb.AddForce(0, 0, fishSpeed, ForceMode.Force);

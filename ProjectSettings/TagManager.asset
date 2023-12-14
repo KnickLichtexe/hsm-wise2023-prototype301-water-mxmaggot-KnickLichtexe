@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shore
   - FishSpawner
+  - delete_later
   layers:
   - Default
   - TransparentFX

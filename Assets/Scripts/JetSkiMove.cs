@@ -24,6 +24,7 @@ public class JetSkiMove : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(other.gameObject, 0);
+            Debug.Log("UR DEAD!");
         }
 
     }

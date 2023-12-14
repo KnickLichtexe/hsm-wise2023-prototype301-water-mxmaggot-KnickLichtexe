@@ -6,34 +6,34 @@ public class DuckMovement : MonoBehaviour
 {
     public GameObject Player;
     public Rigidbody rb;
-    public float sideSpeed = -1f;
-    // Start is called before the first frame update
+    public float sideSpeed = 1f;
+    private float currentX;
+    private bool rechts;
     void Start()
     {
-        
+        float currentX = this.transform.position.x;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        float currentX = this.transform.position.x;
         if (Input.GetKey("space"))
         {
-            rb.AddForce(sideSpeed, 0, 0, ForceMode.Force);
-            //this.transform.Translate((sideSpeed * (-1)) * Time.deltaTime, 0, 0, Space.World);
-        }
-        else
-        {
-            rb.AddForce(-1 * sideSpeed, 0, 0, ForceMode.Force);
+            this.transform.Translate(sideSpeed, 0, 0, Space.World);
+            //probably a braindead way of doing this, checks wether the duck is about to collide with the shore by comparing its x coordinate with a preset value (cf spawner)
+            //you could probably use a collision system and rb.addforce instead but that made changing directions a nightmare so fuck it
+            if (currentX > 4.5 && rechts == false)
+            {
+                sideSpeed = sideSpeed * (-1);
+                rechts = true;
+            }
+            else if (currentX < -4.5 && rechts == true)
+            {
+                sideSpeed = sideSpeed * (-1);
+                rechts = false;
+            }
         }
     }
 
-    //void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Shore"))
-    //    {
-    //        sideSpeed = sideSpeed * (-1);
-    //    }
-    //}
-
-    
+        
 }
