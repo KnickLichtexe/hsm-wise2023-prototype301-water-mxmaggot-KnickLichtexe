@@ -5,7 +5,8 @@ using UnityEngine;
 public class DuckMovement : MonoBehaviour
 {
     public GameObject Player;
-    public float sideSpeed = 1f;
+    public Rigidbody rb;
+    public float sideSpeed = -1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,8 @@ public class DuckMovement : MonoBehaviour
     {
         if (Input.GetKey("space"))
         {
-            this.transform.Translate((sideSpeed * (-1)) * Time.deltaTime, 0, 0, Space.World);
+            rb.AddForce(0, sideSpeed, 0, ForceMode.Force);
+            //this.transform.Translate((sideSpeed * (-1)) * Time.deltaTime, 0, 0, Space.World);
         }
         else
         {
