@@ -27,5 +27,13 @@ public class DuckMovement : MonoBehaviour
         }
     }
 
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Shore"))
+    //    {
+    //        sideSpeed = sideSpeed * (-1);
+    //    }
+    //}
+
     
 }
