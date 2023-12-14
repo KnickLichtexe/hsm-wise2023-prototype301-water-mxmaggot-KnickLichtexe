@@ -18,12 +18,12 @@ public class DuckMovement : MonoBehaviour
     {
         if (Input.GetKey("space"))
         {
-            rb.AddForce(0, sideSpeed, 0, ForceMode.Force);
+            rb.AddForce(sideSpeed, 0, 0, ForceMode.Force);
             //this.transform.Translate((sideSpeed * (-1)) * Time.deltaTime, 0, 0, Space.World);
         }
         else
         {
-            this.transform.Translate(sideSpeed * Time.deltaTime, 0, 0, Space.World);
+            rb.AddForce(-1 * sideSpeed, 0, 0, ForceMode.Force);
         }
     }
 

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 24913340}
   - component: {fileID: 24913339}
   - component: {fileID: 24913343}
+  - component: {fileID: 24913344}
   m_Layer: 0
   m_Name: Ducky
   m_TagString: Player
@@ -244,7 +245,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 24913338}
+  rb: {fileID: 24913344}
   sideSpeed: 1.42
+--- !u!54 &24913344
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24913338}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &718185808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3113629618115897364, guid: 3e0ec1b91c39fcc49a949f9e468a096f, type: 3}
