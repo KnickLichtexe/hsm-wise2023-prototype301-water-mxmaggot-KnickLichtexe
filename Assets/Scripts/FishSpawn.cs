@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class FishSpawn : MonoBehaviour
 {
-    public Rigidbody Fish;
-    private int Score;
+    public GameObject Fish;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,21 +17,9 @@ public class FishSpawn : MonoBehaviour
         
     }
 
-    void FixedUpdate()
-    {
-        
-    }
-
     void FishSpawner()
     {
-        Rigidbody clone;
-        clone = Instantiate(Fish, transform.position, transform.rotation);
-        clone.velocity = transform.forward * 3;
+        Instantiate(Fish, transform.position, transform.rotation);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Destroy(this.gameObject, 0);
-        Score++;
-    }
+    
 }

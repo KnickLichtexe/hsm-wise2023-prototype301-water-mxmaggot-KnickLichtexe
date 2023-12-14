@@ -25,13 +25,5 @@ public class DuckMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(gameObject.name + " just hit " + other.name);
-
-        if (other.gameObject.CompareTag("Shore"))
-        {
-            sideSpeed = sideSpeed * -1;
-        }
-    }
+    
 }
