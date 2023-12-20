@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DuckMovement : MonoBehaviour
 {
     public GameObject Player;
     public Rigidbody rb;
+    private int Score;
     public float sideSpeed = 1f;
     private float currentX;
     private bool rechts;
@@ -35,5 +37,14 @@ public class DuckMovement : MonoBehaviour
         }
     }
 
-        
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("delete_later"))
+        {
+            Score++;
+            Debug.Log(Score);
+        }
+
+    }
+
 }
