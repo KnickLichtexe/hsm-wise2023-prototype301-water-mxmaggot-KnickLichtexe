@@ -5,7 +5,6 @@ using UnityEngine;
 public class FishMove : MonoBehaviour
 {
     public float fishSpeed;
-    private int Score;
     public Rigidbody rb;
     public GameObject Fish;
     void Start()
@@ -15,15 +14,18 @@ public class FishMove : MonoBehaviour
     void Update()
     {
         rb.AddForce(0, 0, fishSpeed, ForceMode.Force);
+
+        if (transform.position.x <= -30)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject, 0);
-            Score++;
-            Debug.Log(Score);
+            Destroy (gameObject);
         }
 
     }

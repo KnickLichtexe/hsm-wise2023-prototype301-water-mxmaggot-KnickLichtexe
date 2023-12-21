@@ -33,12 +33,12 @@ public class FishSpawn : MonoBehaviour
 
     void FishSpawner()
     {
-        chanceToSpawn = Random.Range(1, 13);
+        chanceToSpawn = Random.Range(1, 10);
         if (chanceToSpawn <= 6) //assigns random value to int and uses that to randomize spawn
         {
             GameObject cloneFish;
-            cloneFish = Instantiate(Fish, transform.position, transform.rotation);
-            cloneFish.tag = "delete_later";
+            cloneFish = Instantiate(Fish, transform.position, transform.rotation * Quaternion.Euler(0f, 180f, 0));
+            cloneFish.tag = "food";
             //spawns clone of the original and automatically tags it for cleanup (nonfunctional)
 
         }
