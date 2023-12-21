@@ -14,13 +14,18 @@ public class FishMove : MonoBehaviour
     void Update()
     {
         rb.AddForce(0, 0, fishSpeed, ForceMode.Force);
+
+        if (transform.position.x <= -30)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject, 0);
+            Destroy (gameObject);
         }
 
     }

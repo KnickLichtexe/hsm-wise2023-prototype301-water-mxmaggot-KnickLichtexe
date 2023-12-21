@@ -8,6 +8,7 @@ TagManager:
   - FishSpawner
   - delete_later
   - enemy
+  - food
   layers:
   - Default
   - TransparentFX

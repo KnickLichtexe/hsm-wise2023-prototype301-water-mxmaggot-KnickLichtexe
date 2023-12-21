@@ -34,7 +34,7 @@ public class JetskiSpawn : MonoBehaviour
     void JetSkiSpawner()
     {
         chanceToSpawn = Random.Range(1, 7);
-        if (chanceToSpawn <= 3) //assigns random value to int and uses that to randomize spawn
+        if (chanceToSpawn <= 2) //assigns random value to int and uses that to randomize spawn
         {
             GameObject cloneSki;
             cloneSki = Instantiate(JetSki, transform.position, transform.rotation);

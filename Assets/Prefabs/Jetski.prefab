@@ -119,8 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061990627b59bc244a504c75c8d970be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skiSpeed: 0
-  rb: {fileID: 0}
   JetSki: {fileID: 0}
 --- !u!54 &-5304248876164890948
 Rigidbody:

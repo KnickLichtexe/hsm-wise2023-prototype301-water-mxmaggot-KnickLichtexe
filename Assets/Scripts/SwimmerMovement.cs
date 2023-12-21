@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwimmerMovement : MonoBehaviour
 {
-    public float SwimmerSpeed, SwimSpeed;
     public Rigidbody rb;
     public GameObject JetSki;
     // Start is called before the first frame update
@@ -16,15 +15,19 @@ public class SwimmerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(-SwimSpeed, 0, SwimmerSpeed, ForceMode.Force);
+        transform.position += new Vector3(0.0009f, 0, -0.017f);
+
+        if (transform.position.x <= -30)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject, 0);
-            Debug.Log("UR DEAD!");
+            Score.ded = true;
         }
 
     }

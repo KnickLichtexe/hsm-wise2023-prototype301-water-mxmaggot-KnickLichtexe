@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetSkiMove : MonoBehaviour
+public class WreckageMovement : MonoBehaviour
 {
-    public GameObject JetSki;
+    public GameObject Wreckage;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +14,10 @@ public class JetSkiMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, -0.08f);
+        transform.position += new Vector3(0, 0, -0.017f);
 
-        if(transform.position.x <= -30)
-        {  
+        if (transform.position.x <= -30)
+        {
             Destroy(gameObject);
         }
     }
@@ -26,6 +26,7 @@ public class JetSkiMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("UR DEAD!");
             Score.ded = true;
         }
 
