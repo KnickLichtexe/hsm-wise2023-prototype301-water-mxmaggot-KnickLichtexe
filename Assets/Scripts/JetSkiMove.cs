@@ -14,7 +14,10 @@ public class JetSkiMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Score.ded == false)
+        { 
         transform.position += new Vector3(0, 0, -0.08f);
+        }
 
         if(transform.position.x <= -30)
         {  
