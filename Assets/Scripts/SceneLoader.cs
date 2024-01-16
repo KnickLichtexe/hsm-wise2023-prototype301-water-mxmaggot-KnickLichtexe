@@ -18,7 +18,11 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.LoadScene("Ducky");
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && DuckMovement.win == true)
+        {
+            SceneManager.LoadScene("Ducky");
+        }
+        if (Input.GetKeyDown("space") && Score.ded == true)
         {
             SceneManager.LoadScene("Ducky");
         }
