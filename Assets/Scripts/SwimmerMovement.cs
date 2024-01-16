@@ -15,7 +15,7 @@ public class SwimmerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score.ded == false)
+        if (Score.ded == false && DuckMovement.win == false)
         {
             transform.position += new Vector3(0.0009f, 0, -0.017f);
         }

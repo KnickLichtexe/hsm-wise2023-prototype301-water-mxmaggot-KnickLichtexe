@@ -18,5 +18,9 @@ public class SceneLoader : MonoBehaviour
         {
             SceneManager.LoadScene("Ducky");
         }
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene("Ducky");
+        }
     }
 }

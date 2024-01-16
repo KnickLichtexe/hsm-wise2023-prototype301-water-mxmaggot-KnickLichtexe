@@ -15,7 +15,7 @@ public class FishMove : MonoBehaviour
     {
         
 
-        if(Score.ded == false)
+        if(Score.ded == false && DuckMovement.win == false)
         {
             transform.position += new Vector3(0, 0, -0.08f);
         }
