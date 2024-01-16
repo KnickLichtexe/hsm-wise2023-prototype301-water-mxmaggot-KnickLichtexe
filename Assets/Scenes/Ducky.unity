@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5212af30069f84caa7b0686b2e2ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wreckage: {fileID: 468119065}
+  Wreckage: {fileID: 4530003105475362356, guid: d011fdcf78cddca4087eb3cbfcfe3ee4, type: 3}
 --- !u!1 &121439727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aa9ccc084869b4b8f3bb18e5dba3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JetSki: {fileID: 1164711819}
+  JetSki: {fileID: 5635081501305652699, guid: 48f40b88d55a54549b191ae3b620f745, type: 3}
 --- !u!23 &1362306743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1519,11 +1519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1374479598 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6887100021731182508, guid: be3f91109d82eb344a06463e7518e29f, type: 3}
-  m_PrefabInstance: {fileID: 8195201473730256281}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1395333161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,7 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73473e246af4c34483949953031c738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Swimmer: {fileID: 1374479598}
+  Swimmer: {fileID: 6986768233181138266, guid: 11e2575ed1c7ae44a875994f4f6f2ede, type: 3}
 --- !u!1 &1989284010
 GameObject:
   m_ObjectHideFlags: 0
