@@ -25,7 +25,7 @@ public class SwimmerSpawner : MonoBehaviour
         if (chanceToSpawn <= 2) //assigns random value to int and uses that to randomize spawn
         {
             GameObject cloneSwimmer;
-            cloneSwimmer = Instantiate(Swimmer, transform.position, transform.rotation * Quaternion.Euler(0f, 0, 90f));
+            cloneSwimmer = Instantiate(Swimmer, transform.position, transform.rotation * Quaternion.Euler(0f, 180f, 0f));
             cloneSwimmer.tag = "delete_later";
             //spawns clone of the original and automatically tags it for cleanup (nonfunctional)
         }

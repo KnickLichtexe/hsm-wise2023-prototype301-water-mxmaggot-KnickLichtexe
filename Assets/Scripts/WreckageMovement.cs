@@ -14,8 +14,10 @@ public class WreckageMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, -0.017f);
-
+        if (Score.ded == false && DuckMovement.win == false)
+        {
+            transform.position += new Vector3(0, 0, -0.017f);
+        }
         if (transform.position.x <= -30)
         {
             Destroy(gameObject);

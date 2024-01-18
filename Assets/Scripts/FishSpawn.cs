@@ -34,7 +34,7 @@ public class FishSpawn : MonoBehaviour
     void FishSpawner()
     {
         chanceToSpawn = Random.Range(1, 10);
-        if (chanceToSpawn <= 6) //assigns random value to int and uses that to randomize spawn
+        if (chanceToSpawn <= 6 && Score.ded == false && DuckMovement.win == false) //assigns random value to int and uses that to randomize spawn
         {
             GameObject cloneFish;
             cloneFish = Instantiate(Fish, transform.position, transform.rotation * Quaternion.Euler(0f, 180f, 0));

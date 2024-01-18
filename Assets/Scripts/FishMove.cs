@@ -13,7 +13,12 @@ public class FishMove : MonoBehaviour
     }
     void Update()
     {
-        rb.AddForce(0, 0, fishSpeed, ForceMode.Force);
+        
+
+        if(Score.ded == false && DuckMovement.win == false)
+        {
+            transform.position += new Vector3(0, 0, -0.08f);
+        }
 
         if (transform.position.x <= -30)
         {
