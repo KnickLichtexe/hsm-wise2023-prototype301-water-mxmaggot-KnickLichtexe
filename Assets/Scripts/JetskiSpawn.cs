@@ -37,7 +37,7 @@ public class JetskiSpawn : MonoBehaviour
         if (chanceToSpawn <= 2) //assigns random value to int and uses that to randomize spawn
         {
             GameObject cloneSki;
-            cloneSki = Instantiate(JetSki, transform.position, transform.rotation);
+            cloneSki = Instantiate(JetSki, transform.position, transform.rotation * Quaternion.Euler(0f, 180, 0));
             cloneSki.tag = "delete_later";
             //spawns clone of the original and automatically tags it for cleanup (nonfunctional)
         }

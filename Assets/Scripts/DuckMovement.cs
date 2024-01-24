@@ -18,6 +18,8 @@ public class DuckMovement : MonoBehaviour
 
     public Text WinMessage;
     public Text RestartWin;
+    public AudioSource Swim, Munch, Fishy;
+
     void Start()
     {
         float currentX = this.transform.position.x;
@@ -31,9 +33,11 @@ public class DuckMovement : MonoBehaviour
             float currentX = this.transform.position.x;
             if (Input.GetKey("space"))
             {
+                
                 this.transform.Translate(sideSpeed, 0, 0, Space.World);
                 //probably a braindead way of doing this, checks wether the duck is about to collide with the shore by comparing its x coordinate with a preset value (cf spawner)
                 //you could probably use a collision system and rb.addforce instead but that made changing directions a nightmare so fuck it
+           
                 if (currentX > 4.5 && rechts == false)
                 {
                     sideSpeed = sideSpeed * (-1);
@@ -44,6 +48,7 @@ public class DuckMovement : MonoBehaviour
                     sideSpeed = sideSpeed * (-1);
                     rechts = false;
                 }
+                
             }
 
             if (Score.scorenumber >= 5)
@@ -60,6 +65,7 @@ public class DuckMovement : MonoBehaviour
        
         if (other.gameObject.tag == "food")
         {
+            Munch.Play();
             Score.scorenumber++;
             a_Animator.SetTrigger("Eat");
 
