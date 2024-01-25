@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using UnityEngine.UIElements.Experimental;
 
 public class Score : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Score : MonoBehaviour
     public Text Restart;
     public static int scorenumber;
     public static bool ded = false;
+
+    public AudioSource Beating;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +28,11 @@ public class Score : MonoBehaviour
     void Update()
 
     {
-        textScore.text = scorenumber.ToString() + "/5";
+        textScore.text = scorenumber.ToString() + "/5" + " Golden-Fish eaten";
 
         if(ded == true && DuckMovement.win == false)
         {
+            Beating.Play();
             a_Animator.SetBool("Death", true);
             GameOver.text = "Game Over";
             Restart.text = "Press R to Play Again";

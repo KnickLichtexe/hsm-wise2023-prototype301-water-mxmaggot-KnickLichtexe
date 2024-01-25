@@ -42,17 +42,17 @@ public class WreckageSpawner : MonoBehaviour
         if (chanceToSpawn == 2) //assigns random value to int and uses that to randomize spawn
         {
 
-            transform.position = new Vector3(-5.5f, 0, 130);
+            transform.position = new Vector3(-5.5f, .6f, 130);
             GameObject cloneWreckage;
-            cloneWreckage = Instantiate(Wreckage, transform.position, transform.rotation * Quaternion.Euler(0f, 0, -30f));
+            cloneWreckage = Instantiate(Wreckage, transform.position, transform.rotation * Quaternion.Euler(0f, 180, 30f));
             cloneWreckage.tag = "delete_later";
             //spawns clone of the original and automatically tags it for cleanup (nonfunctional)
         }
         if (chanceToSpawn == 1) //assigns random value to int and uses that to randomize spawn
         {
-            transform.position = new Vector3(5.5f, 0, 130);
+            transform.position = new Vector3(5.5f, .6f, 130);
             GameObject cloneWreckage;
-            cloneWreckage = Instantiate(Wreckage, transform.position, transform.rotation * Quaternion.Euler(0f, 0, 30f));
+            cloneWreckage = Instantiate(Wreckage, transform.position, transform.rotation * Quaternion.Euler(0f, 180, -30f));
             cloneWreckage.tag = "delete_later";
             //spawns clone of the original and automatically tags it for cleanup (nonfunctional)
         }
